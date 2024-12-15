@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}О системе{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Заголовок -->
+    <h1 class="text-center mb-4" style="background: linear-gradient(to right, #6a11cb, #2575fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        О системе
+    </h1>
+    
+    <!-- Описание системы -->
+    <p class="text-center text-muted mb-4">
+        Это система управления научными конференциями. Она позволяет:
+    </p>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Регистрировать участников.</li>
+        <li class="list-group-item">Планировать мероприятия.</li>
+        <li class="list-group-item">Управлять финансами.</li>
+    </ul>
+    
+    <!-- Дополнительная информация -->
+    <h2 class="mt-4 text-center" style="background: linear-gradient(to right, #6a11cb, #2575fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        О нас
+    </h2>
+    <p class="text-center text-muted mb-4">
+        Мы создали эту систему для упрощения управления научными конференциями. Наша цель — сделать процесс регистрации участников, планирования мероприятий и управления финансами максимально удобным и эффективным.
+    </p>
+    <p class="text-center text-muted">
+        Если у вас есть вопросы или предложения, свяжитесь с нами по адресу <a href="mailto:support@conference-system.com">support@conference-system.com</a>.
+    </p>
+
+    <!-- Кнопка "На главную" -->
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-primary btn-lg">На главную</a>
+    </div>
+</div>
+{% endblock %}

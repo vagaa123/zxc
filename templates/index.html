@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <!-- Заголовок с градиентным фоном -->
+    <h1 class="display-4 mt-5 mb-4" style="background: linear-gradient(to right, #6a11cb, #2575fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Добро пожаловать на сайт научных конференций!
+    </h1>
+    
+    <!-- Описание -->
+    <p class="lead text-muted mb-5">
+        Здесь вы можете управлять участниками, мероприятиями и финансами. Начните прямо сейчас!
+    </p>
+    
+    <!-- Кнопки для навигации -->
+    <div class="row justify-content-center">
+        <!-- Первая строка кнопок -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Регистрация участников</h5>
+                    <p class="card-text text-muted">Добавьте новых участников в систему.</p>
+                    <a href="/register" class="btn btn-outline-primary" aria-label="Перейти к регистрации участников">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Список участников</h5>
+                    <p class="card-text text-muted">Просмотрите и отредактируйте список участников.</p>
+                    <a href="/participants" class="btn btn-outline-primary" aria-label="Перейти к списку участников">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <!-- Вторая строка кнопок -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Добавить мероприятие</h5>
+                    <p class="card-text text-muted">Создайте новое мероприятие.</p>
+                    <a href="/add_event" class="btn btn-outline-primary" aria-label="Перейти к добавлению мероприятия">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Список мероприятий</h5>
+                    <p class="card-text text-muted">Просмотрите и отредактируйте список мероприятий.</p>
+                    <a href="/events" class="btn btn-outline-primary" aria-label="Перейти к списку мероприятий">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <!-- Третья строка кнопок -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Добавить финансовую запись</h5>
+                    <p class="card-text text-muted">Добавьте финансовую запись для мероприятия.</p>
+                    <a href="/add_finance" class="btn btn-outline-primary" aria-label="Перейти к добавлению финансовой записи">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Список финансовых записей</h5>
+                    <p class="card-text text-muted">Просмотрите и отредактируйте финансовые записи.</p>
+                    <a href="/finances" class="btn btn-outline-primary" aria-label="Перейти к списку финансовых записей">Перейти</a>
+                </div>
+            </div>
+        </div>
+        <!-- Четвертая строка кнопок -->
+        <div class="col-12">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">О системе</h5>
+                    <p class="card-text text-muted">Узнайте больше о нашей системе управления конференциями.</p>
+                    <a href="/about" class="btn btn-outline-primary" aria-label="Перейти к информации о системе">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

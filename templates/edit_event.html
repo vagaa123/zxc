@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование мероприятия{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Заголовок -->
+            <h1 class="text-center mb-4" style="background: linear-gradient(to right, #6a11cb, #2575fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Редактирование мероприятия
+            </h1>
+            
+            <!-- Описание -->
+            <p class="text-center text-muted mb-4">
+                Внесите изменения в данные мероприятия.
+            </p>
+            
+            <!-- Форма редактирования мероприятия -->
+            <form method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Название:</label>
+                    <input type="text" id="name" name="name" value="{{ event.name }}" class="form-control" required aria-describedby="name-feedback">
+                    <div id="name-feedback" class="invalid-feedback">
+                        Пожалуйста, введите название мероприятия.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Дата:</label>
+                    <input type="date" id="date" name="date" value="{{ event.date }}" class="form-control" required aria-describedby="date-feedback">
+                    <div id="date-feedback" class="invalid-feedback">
+                        Пожалуйста, выберите дату мероприятия.
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Сохранить</button>
+                    <a href="{{ url_for('events') }}" class="btn btn-secondary btn-lg">Назад</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

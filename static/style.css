@@ -1,0 +1,167 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Градиентный фон */
+    color: #333; /* Темный текст */
+    line-height: 1.6; /* Увеличенный межстрочный интервал */
+    margin: 0;
+    padding: 0;
+}
+
+/* Навигационная панель */
+.navbar {
+    background-color: #2c3e50; /* Темно-синий цвет фона для навигации */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Более заметная тень для навигационной панели */
+    border-bottom: 2px solid #34495e; /* Добавляем нижнюю границу для контраста */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff !important; /* Белый текст для навигации */
+    font-weight: bold; /* Жирный текст */
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #f8f9fa !important; /* Светло-серый при наведении */
+}
+
+/* Активная ссылка в навигации */
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #34495e; /* Темно-синий фон для активной ссылки */
+    border-radius: 8px; /* Закругленные углы */
+}
+
+/* Контейнер */
+.container {
+    margin-top: 40px; /* Отступ сверху для контейнера */
+    padding: 20px; /* Внутренние отступы */
+    background-color: #fff; /* Белый фон для контейнера */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #333; /* Цвет заголовков */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Абзацы */
+p {
+    font-size: 18px; /* Размер текста */
+    margin-bottom: 30px; /* Отступ снизу */
+    color: #6c757d; /* Серый цвет текста */
+}
+
+/* Уведомления (flash messages) */
+.flashes {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 10px 0; /* Внешние отступы */
+}
+
+.flashes li {
+    padding: 15px; /* Внутренние отступы */
+    margin: 10px 0; /* Внешние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    font-size: 16px; /* Размер текста */
+}
+
+.success {
+    background-color: #d4edda; /* Зеленый фон для успешных сообщений */
+    color: #155724; /* Темно-зеленый текст */
+    border: 1px solid #c3e6cb; /* Светло-зеленая рамка */
+}
+
+.error {
+    background-color: #f8d7da; /* Розовый фон для ошибок */
+    color: #721c24; /* Темно-розовый текст */
+    border: 1px solid #f5c6cb; /* Светло-розовая рамка */
+}
+
+/* Кнопки */
+.btn {
+    background-color: #007BFF; /* Синий цвет для всех кнопок */
+    border-color: #007BFF; /* Цвет границы кнопки */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    font-size: 16px; /* Размер текста */
+    transition: all 0.3s ease; /* Плавный переход */
+    color: #fff; /* Белый текст для кнопок */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+    border-color: #0056b3; /* Цвет границы при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+/* Формы */
+.form-control {
+    margin-bottom: 20px; /* Отступ между элементами формы */
+    padding: 12px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    border: 1px solid #ced4da; /* Цвет границы */
+    font-size: 16px; /* Размер текста */
+    transition: border-color 0.3s ease; /* Плавный переход */
+}
+
+.form-control:focus {
+    border-color: #007BFF; /* Синий цвет границы при фокусе */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Тень при фокусе */
+}
+
+/* Список участников */
+.list-group-item {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: space-between; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 15px; /* Внутренние отступы */
+    border-radius: 8px; /* Закругленные углы */
+    margin-bottom: 10px; /* Отступ между элементами */
+    background-color: #f8f9fa; /* Светлый фон */
+    border: 1px solid #dee2e6; /* Цвет границы */
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef; /* Цвет фона при наведении */
+}
+
+/* Кнопки редактирования и удаления */
+.btn-sm {
+    margin-left: 10px; /* Отступ между кнопками */
+    padding: 8px 15px; /* Внутренние отступы */
+    border-radius: 6px; /* Закругленные углы */
+    font-size: 14px; /* Размер текста */
+    background-color: #007BFF; /* Синий цвет для всех кнопок */
+    border-color: #007BFF; /* Цвет границы кнопки */
+    color: #fff; /* Белый текст для кнопок */
+}
+
+.btn-sm:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+    border-color: #0056b3; /* Цвет границы при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+/* Главная страница */
+.display-4 {
+    font-weight: bold; /* Жирный текст для заголовка */
+    color: #007BFF; /* Синий цвет текста */
+}
+
+.lead {
+    font-size: 1.25rem; /* Увеличенный размер текста */
+    color: #6c757d; /* Серый цвет текста */
+}
+
+/* Футер */
+footer {
+    margin-top: 40px; /* Отступ сверху */
+    padding: 20px 0; /* Внутренние отступы */
+    background-color: #f8f9fa; /* Светлый фон */
+    text-align: center; /* Выравнивание текста по центру */
+    border-top: 1px solid #dee2e6; /* Цвет границы */
+    color: #6c757d; /* Серый цвет текста */
+}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактирование участника{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Заголовок -->
+            <h1 class="text-center mb-4" style="background: linear-gradient(to right, #6a11cb, #2575fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Редактирование участника
+            </h1>
+            
+            <!-- Описание -->
+            <p class="text-center text-muted mb-4">
+                Внесите изменения в данные участника.
+            </p>
+            
+            <!-- Форма редактирования -->
+            <form method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Имя:</label>
+                    <input type="text" id="name" name="name" value="{{ participant.name }}" class="form-control" required aria-describedby="name-feedback">
+                    <div id="name-feedback" class="invalid-feedback">
+                        Пожалуйста, введите имя.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" value="{{ participant.email }}" class="form-control" required aria-describedby="email-feedback">
+                    <div id="email-feedback" class="invalid-feedback">
+                        Пожалуйста, введите корректный email.
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Сохранить</button>
+                    <a href="{{ url_for('participants') }}" class="btn btn-secondary btn-lg">Назад</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
